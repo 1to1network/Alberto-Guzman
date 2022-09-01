@@ -225,18 +225,18 @@ var param4 = mmdday.toString();
 var suma = 0;
 
 var i
-for(i=1;i<31;i++){
+for(i=1;i<=31;i++){
 
-
+  console.log(i)
 
 db.collection(param1).doc(param2 + ' total').collection(""+i+"").get().then(function(querySnapshot) {
   
-
+  
     querySnapshot.forEach(function(doc) {
-
+     
       suma+= parseFloat(doc.data().total);
       
- 
+     
       
     });
 
